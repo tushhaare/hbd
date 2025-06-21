@@ -623,9 +623,6 @@
 </style>
 
 <body>
-
-  <audio src="./assets/plb.mp3" id="linkmp3" class="hidden"></audio>
-
     <div id="bodyblur">
         <!-- Wallpaper --><img src="./assets/wp.jpg" id="wallpaper" />
         <div id="beneranblur"></div>
@@ -735,9 +732,6 @@
     </div>
 
     <script>
-        const body = document.querySelector("body");
-    audio = new Audio('' + linkmp3.src);
-    button = document.querySelector('#button');
         
         document.getElementById("kadoIn").onclick = function () { if (fungsiAwal == 0) { audio.play(); fungsiAwal = 1; kadoIn.style = "transition:all .30s ease;transform:scale(10);opacity:0"; wallpaper.style = "transform: scale(1.6);"; ket.style = "display:none"; setTimeout(initengahan, 500); setTimeout(inipesan, 500) } }
 
