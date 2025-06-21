@@ -623,15 +623,18 @@
 </style>
 
 <body>
+
+    <audio src="hbd/assets/plb.mp3" id="linkmp3" class="sembunyi"></audio>
+
     <div id="bodyblur">
-        <!-- Wallpaper --><img src="./assets/wp.jpg" id="wallpaper" />
+        <!-- Wallpaper --><img src="/hbd/assets/wp.jpg" id="wallpaper" />
         <div id="beneranblur"></div>
     </div>
 
     <div id='Content'>
 
         <div id="kadoIn">
-            <!-- Tombol Surat --><img src="./assets/kadoin.png" />
+            <!-- Tombol Surat --><img src="/hbd/assets/kadoin.png" />
         </div>
         <p id="ket">Click the Gift!</p>
 
@@ -675,14 +678,14 @@
 
         <div class="kumpulanstiker">
             <!-- Stiker untuk Konten -->
-            <img src="./assets/bunga.gif" id="fotostiker" />
-            <img src="./assets/pusn.gif" id="fotostiker1" />
-            <img src="./assets/pandacoklat.gif" id="fotostiker2" />
-            <img src="./assets/cilukba.gif" id="fotostiker3" />
-            <img src="./assets/pandakuning.gif" id="fotostiker4" />
-            <img src="./assets/emawh.gif" id="fotostiker5" />
+            <img src="/hbd/assets/bunga.gif" id="fotostiker" />
+            <img src="/hbd/assets/pusn.gif" id="fotostiker1" />
+            <img src="/hbd/assets/pandacoklat.gif" id="fotostiker2" />
+            <img src="/hbd/assets/cilukba.gif" id="fotostiker3" />
+            <img src="/hbd/assets/pandakuning.gif" id="fotostiker4" />
+            <img src="/hbd/assets/emawh.gif" id="fotostiker5" />
 
-            <img src="./assets/pandacoklat.gif" id="fotostiker6" />
+            <img src="/hbd/assets/pandacoklat.gif" id="fotostiker6" />
         </div>
 
         <p id="halo" class="halo"></p>
@@ -725,14 +728,15 @@
 
         <!-- Pesan Ditolak -->
         <div id="pesanditolak">
-            <img id="stikerditolak" src="./assets/weee.gif" />
+            <img id="stikerditolak" src="/hbd/assets/weee.gif" />
             <p id="kataditolak">Just Kidding Heheheh 😂</p>
         </div>
 
     </div>
 
     <script>
-        
+        const body = document.querySelector("body"); const swalst = Swal.mixin({ timer: 2300, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90, }); audio = new Audio('' + linkmp3.src); ftganti = 0; fungsi = 0; fungsiAwal = 0; deffotostiker = fotostiker.src; function berjatuhan() { const heart = document.createElement("div"); heart.className = "fas fa-snowflake"; heart.style.left = (Math.random() * 90) + "vw"; heart.style.animationDuration = (Math.random() * 3) + 2 + "s"; body.appendChild(heart); } setInterval(function name(params) { var heartArr = document.querySelectorAll(".fa-snowflake"); if (heartArr.length > 100) { heartArr[0].remove() } }, 100); Content.style = "opacity:1;margin-top:16vh"; const swals = Swal.mixin({ allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80, });
+
         document.getElementById("kadoIn").onclick = function () { if (fungsiAwal == 0) { audio.play(); fungsiAwal = 1; kadoIn.style = "transition:all .30s ease;transform:scale(10);opacity:0"; wallpaper.style = "transform: scale(1.6);"; ket.style = "display:none"; setTimeout(initengahan, 500); setTimeout(inipesan, 500) } }
 
         async function inipesan() {
